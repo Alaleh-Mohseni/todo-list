@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" 
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="images/R.png">
+    <title>Task Manager</title>
+</head>
+
+<body>
+    <main>
+        <div class="container py-3">
+            <div class="p-5 bg-white rounded-3 col-7" id="taskBox">
+                <div class="container mt-3">
+                    <h2 class="text-center pb-4" style="color: #6610f2;">Task Manager</h2>
+
+                    <!-- Task Input -->
+                    <div class="form-group mb-3 inputBx">
+                        <label class="mb-1 fw-semibold" for="title">Title</label>
+                        <input type="text" class="form-control" id="title" placeholder="Add a task">
+                    </div>
+
+                    <!-- Task Description -->
+                    <div class="form-group mb-5">
+                        <label class="mb-1 fw-semibold" for="description">Description</label>
+                        <textarea class="form-control" id="description" placeholder="Add description..." rows="3"
+                            style="height: 45px;">
+                        </textarea>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="mt-3 d-flex justify-content-end">
+                        <button id="clear" class="btn text-white px-3 me-3" style="background-color: #6610f2;">
+                            Clear list
+                            <i class="fa-solid fa-xmark text-white ps-2"></i>
+                        </button>
+
+                        <button id="add" class="btn text-white me-2 px-3" style="background-color: #6610f2;">
+                            Add to list
+                            <i class="fa fa-plus text-white ps-2" style="font-size: 14px;"></i>
+                        </button>
+                    </div>
+
+                    <!-- Task Box -->
+                    <div id="items" class="my-4">
+                        <h2 class="pt-2">Your Tasks</h2>
+
+                        <div class="form-group mb-4 inputBx col-5" style="float: right;" id="inputBx">
+                            <label class="mb-1 fw-semibold" for="title">Filter tasks</label>
+                            <input type="text" class="form-control" id="filter" placeholder="Filter...">
+                            <i class="fa fa-search ps-2"></i>
+                        </div>
+
+                        <!-- Table -->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Task Title</th>
+                                    <th scope="col">Task Description</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                                <tr class="tableList">
+                                    <th scope="row">1</th>
+                                    <td class="ps-4">...</td>
+                                    <td class="ps-4">...</td>
+                                    <td>
+                                        <button class="btn btn-sm text-white" id="delete"
+                                            style="background-color: #6610f2;">
+                                            Delete
+                                            <i class="fa fa-trash-alt ps-1" style="font-size: 13px;"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous">
+    </script>
+    <script src="../bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous">
+    </script>
+    <!-- My JS -->
+    <script src="app/app.js"></script>
+</body>
+
+</html>
